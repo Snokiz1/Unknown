@@ -2,55 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aziz</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="pngkit_pacman-ghost-png_1299265.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('background.jfif');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .countdown {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 60px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff0000, #ff8c00, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+        }
+
+        #timer {
+            font-size: 40px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .time-unit {
+            padding: 0 5px;
+        }
+
+        .colon {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .expired {
+            animation: rotateOut 2s linear infinite;
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        @keyframes rotateOut {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            #timer {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            #timer {
+                font-size: 24px;
+            }
+
+            .time-unit {
+                padding: 0 3px;
+            }
+
+            .expired {
+                font-size: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="top-container">
-        <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-        <h1>I'm Abdulaziz.</h1>
-        <h2>a programmer.</h2>
-        <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-        <img src="images/mountain.png" alt="mountion-img">
+    <div class="countdown">
+        <h1>Tuwaiq</h1>
+        <p>Showtime in</p>
+        <div id="timer">
+            <span class="time-unit" id="days">00</span><span class="colon">:</span>
+            <span class="time-unit" id="hours">00</span><span class="colon">:</span>
+            <span class="time-unit" id="minutes">00</span><span class="colon">:</span>
+            <span class="time-unit" id="seconds">00</span>
+        </div>
     </div>
-    <div class="middle-container">
-        <div class="profile">
-          <img class="profile-img" src="images/profile.png" alt="profile-img">
-          <h2>Hello.</h2>
-          <p class="intro">My name is Abdulaziz i'm a software engineering student at <a class="aintro" href="https://www.pmu.edu.sa/">Prince Mohammed Bin Fahd University.</a></p>
-        </div>
-        <hr>
-        <div class="skills">
-          <h2>My Skills.</h2>
-          <div class="skill-row">
-            <img class="java-img" src="images/img_433001.png" alt="">
-            <h3>Java Langauge</h3>
-            <p>I have expierence programming in java and have knowledge in OOP.</p>
-          </div>
-          <div class="skill-row">
-            <img class="code-img" src="images/1091328.png" alt="">
-            <h3>Web development</h3>
-            <p>Took a course in Udemy, and had expierence in working in HTML, CSS and JavaScript.</p>
-          </div>
-        </div>
-        <hr>
-        <div class="contact-me">
-          <h2>Get In Touch</h2>
-          <h3>Below you can reach me via email.</h3>
-          <p class="contact-message">you can also find my linked in and soicals below.</p>
-          <a class="btn" href="mailto:Snokiz@hotmail.com">CONTACT ME</a>
-        </div>
-      </div>
-      
-      
-      <div class="bottom-container">
-        <a class="footer-link" href="https://www.linkedin.com/in/abdulaziz-abudahesh-96663b195/">LinkedIn</a>
-        <a class="footer-link" href="https://snokiz1.github.io/">Website</a>
-        <p class="coppyright">© 2023 Alqahtani</p>
-    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sep 18, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the elements with ids
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+
+          // If the count down is finished, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "<span class='expired'>EXPIRED</span>";
+          }
+        }, 1000);
+    </script>
 </body>
 </html>
